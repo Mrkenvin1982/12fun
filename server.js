@@ -73,8 +73,8 @@ app.use(function (req, res, next) {
     }
 });
 
-// var request = require('request');
-// var r = request.get('https://new.pay.zing.vn/ajax/payment-zingcard', function (err, res, body) {
+// var request = require("request");
+// var r = request.get("https://new.pay.zing.vn/ajax/payment-zingcard", function (err, res, body) {
 //   console.log(res.headers);
 //     let a = JSON.parse(res.body);
 //   console.log(a);
