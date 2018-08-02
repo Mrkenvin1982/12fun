@@ -1,0 +1,62 @@
+<!-- <script src="ckeditor/ckeditor.js"></script>
+<script src="ckeditor/samples/js/sample.js"></script>
+<link rel="stylesheet" href="ckeditor/samples/css/samples.css">
+<link rel="stylesheet" href="ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">-->
+<div class="forms" id="AddNews-Events" style="display: none;">
+    <div class="form-grids row widget-shadow" data-example-id="basic-forms">
+        <div class="form-title">
+            <h4>Đăng tin mới</h4>
+        </div>
+        <div class="form-body">
+            <form id="formAddNews-Events">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Tài khoản</label>
+                    <input type="text" disabled class="form-control" id="txtUsername" placeholder="Tài khoản">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" id="lblType">Kiểu</label>
+                    <select class="form-control" id="slType" name="type">
+                        <option value="">---Chọn---</option>
+                        <option value="1">Sự Kiện</option>
+                        <option value="0">Tin Tức</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" id="lblTitle">Tiêu đề</label>
+                    <textarea class="form-control" rows="2" name="title" id="txtTitle"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" id="lblContent">Nội Dung</label>
+                    <textarea class="form-control" rows="10" name="content" id="txtContent"></textarea>
+                </div>
+                <div class="form-group" id="messageError" style="display: none;">
+                    <label for="exampleInputEmail1" id="lblMessage" style="color: red; font-weight: bold">
+
+                    </label>
+                </div>
+                <div class="sub_home">
+                    <input type="button" class="btn btn-primary" id="btnAddNews" value="Đăng Bài">
+                    <div class="clearfix">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="js/controllers/admin/add-news-events.js"></script>
+    </div>
+    <!--<div class="grid-container">
+			<div class="grid-width-100">
+				<div id="editor">
+	
+				</div>
+			</div>
+		</div>
+
+	<script>	
+	initSample();
+    </script>-->
+
+</div>

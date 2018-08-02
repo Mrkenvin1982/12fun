@@ -1,0 +1,123 @@
+body{
+	background:url(../images/404/full.jpg) no-repeat center 0 ;
+	overflow: hidden;
+}
+
+.wrapper-page{
+	width: 1000px;
+	height: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+a{
+	display: block;
+	text-decoration: none;
+}
+
+
+.header{
+	width: 1000px;
+	height: 735px;
+}
+
+
+a.logo-game{
+float: left;
+font-size: 0;
+height: 115px;
+left: 404px;
+position: relative;
+top: 10px;
+width: 202px;
+}
+
+ul.utiLink{
+	float: right;
+	right: -45px;
+	top: 250px;
+	position: relative;
+}
+
+ul.utiLink li{
+	display: inline-block;
+	color: #fff;
+}
+
+ul.utiLink li a{
+	color: #fff;
+	font-size: 14px;
+	font-family: "Tahoma";
+	display: block;
+	padding: 0 10px;
+}
+
+ul.utiLink li a:hover{
+	color: #ffe96d;
+}
+
+.footer{
+	width: 1000px;
+	position: relative;
+}
+
+.vng-logo{
+font-size: 0;
+height: 57px;
+left: 135px;
+position: absolute;
+top: -17px;
+width: 38px;
+}
+
+.changyou-logo{
+font-size: 0;
+height: 57px;
+left: 198px;
+position: absolute;
+top: -20px;
+width: 129px;
+}
+
+
+a.btn{
+	float: left;
+	position: relative;
+	top: 487px;
+	font-size: 0;
+}
+
+a.home{
+	background:url(../images/404/btn-home.png) no-repeat 0 0 ;
+	height: 65px;
+    left: 114px;
+    margin-top: 27px;
+    width: 173px;
+}
+
+a.home:hover{
+	background-position: 0 -70px;
+}
+
+a.home.off{
+	background-position: 0 bottom;
+	cursor: default;
+}
+
+
+a.forum{
+	background:url(../images/404/btn-4rum.png) no-repeat 0 0 ;
+	width: 173px;
+	height: 65px;
+	left: 133px;
+    margin-top: 27px;
+}
+
+a.forum:hover{
+	background-position: 0 -70px;
+}
+
+a.forum.off{
+	background-position: 0 bottom;
+	cursor: default;
+}

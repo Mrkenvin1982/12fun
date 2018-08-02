@@ -1,0 +1,485 @@
+<html lang="en">
+
+<head>
+    <title>Tài Xỉu - TLBB Ngũ Hoa Đàn</title>
+    <link rel="icon" type="image/ico" href="/images/favicon.ico">
+    <link href="/css/dice/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/dice/styleScale.css" rel="stylesheet">
+    <link href="/css/dice/style-header.css" rel="stylesheet">
+    <link href="/css/dice/popupMiniGame.css" rel="stylesheet">
+    <link href="/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link href="/css/dice/animate.css" rel="stylesheet">
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.nicescroll.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        $(function () {
+            $("#gametx").draggable();
+        });
+    </script>
+</head>
+
+<body id="bBody" style="display: none">
+    <input id="totalPointPut" type="hidden" value="0" />
+    <input id="totalPointO" type="hidden" value="0" />
+    <input id="totalPointU" type="hidden" value="0" />
+    <div id="mainHeader" class="headerinfo" style="display: none">
+        <div id="headeScaleAccount" class="resonsiveHeader">
+            <div class="center-respon">
+                <div class="headerContent">
+                    <div class="center">
+                        <div class="hd-left">
+                            <div id="divAccount">
+                                <div class="avatar-header" data-toggle="modal" data-target="#popup-canhan">
+                                    <img src="/images/2.jpg" alt="" class="avtUser">
+                                </div>
+                                <div class="user-header">
+                                    <div class="name-header"></div>
+                                    <div class="id-header"></div>
+                                    <!--<div class="mes-header" data-target="#md_message" data-toggle="modal">
+                                        <span id="countMessage" style="display: none;">0</span>
+                                    </div> -->
+                                </div>
+                                <div class="coin-header">
+                                    <div class="item-coin" title="Tổng bạc" id="lblUserMoney">0</div>
+                                </div>
+                                <div class="coin-recharge">
+                                    <a class="btn-napcoi" href="/account"></a>
+                                    <!--<span class="btn-napcoi" data-toggle="modal" data-target="#popup-giaodich">
+                                    </span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logo">
+                            <a href="/">
+                                <img src="/images/dice.png" alt="">
+                            </a>
+                        </div>
+                        <div class="hd-right">
+                            <div class="menu-header">
+                                <div class="coin-header">
+                                    <div class="item-coin" title="Bạc đặt tài" id="lblTai">0</div>
+                                </div>
+                                <div class="coin-header">
+                                    <div class="item-coin" title="Bạc đặt xỉu" id="lblXiu">0</div>
+                                </div>
+                                <ul>
+                                    <!--<li>
+                                        <a href="#" class="tablinks" data-target="#popup-canhan" data-toggle="modal">
+                                            <span class="icon-ketsat"></span> Két sắt</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-target="#popup-giaodich" data-toggle="modal">
+                                            <span class="icon-daily"></span> Đại lý</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/12fun.page" target="_blank">
+                                            <span class="icon-fanpage"></span>Fanpage</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-target="#popup-giaodich" data-toggle="modal">
+                                            <span class="icon-chuyenfun"></span>Chuyển fun</a>
+                                    </li>
+                                    <li>
+                                        <form action="/Account/LogOff" id="logoutForm" method="post">
+                                            <a href="">
+                                                <span class="icon-thoat"></span>
+                                                Thoát
+                                            </a>
+                                        </form>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notify">
+                    <marquee id="txt_marquee">
+                        <!-- <ul class="list-inline ">
+                            <li>
+                                <a style="color:yellow">Download và sử dụng App OTP 12fun tại https://dl.12fun.net để thực hiện giao dịch an toàn
+                                    và tiện lợi</a>
+                            </li>
+                            <li>
+                                <a style="color:yellow">Tham gia sự kiện TÀI XỈU - GIA CÁT DỰ nhận ngay xe máy SH 150i. Chi tiết tại https://tintuc12fun.net.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng nohuroikiaa vừa nổ hũ [Hải Tặc] 860,053 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng bima0000 vừa nổ hũ [Thần Đèn] 565,221 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Con0709 vừa nổ hũ [Thần Đèn] 7,659,600 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Anh3ti vừa nổ hũ [Kim cương] 615,165 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Nabebi59 vừa nổ hũ [Kim cương] 852,326 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Toptaixiu1 vừa nổ hũ [Hải Tặc] 10,673,320 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng bima0000 vừa nổ hũ [Thần Đèn] 584,742 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Anhtrunghihi vừa nổ hũ [Vô Cực] 532,381 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng cuong009 vừa nổ hũ [Tam Quốc] 601,934 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Haroub vừa nổ hũ [Hải Tặc] 7,982,620 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng quynh984 vừa nổ hũ [Vô Cực] 572,484 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng ASAAAS vừa nổ hũ [Thần Đèn] 615,894 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Nounecon vừa nổ hũ [Tam Quốc] 15,595,280 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Quyetnat1968 vừa nổ hũ [Kim cương] 1,534,610 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng prookjn vừa nổ hũ [Hải Tặc] 761,792 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Hoangco6688 vừa nổ hũ [Tam Quốc] 904,950 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng Dinhmoithua18 vừa nổ hũ [Vô Cực] 693,049 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng chich227 vừa nổ hũ [Vô Cực] 5,005,350 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng bima0000 vừa nổ hũ [Kho báu vũ trụ] 9,546,590 fun.</a>
+                            </li>
+                            <li>
+                                <a style="color:#f5e641">Chúc mừng teppi12345 vừa nổ hũ [Vòng quay diệu kỳ] 528,747 fun.</a>
+                            </li>
+                        </ul> -->
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item-content" id="gametxcontent">
+        <input type="hidden" class="input-tai currency-bio" id="bidO_0" value="" autocomplete="off" maxlength="18">
+        <input type="hidden" class="input-xiu currency-biu" id="bidU_0" value="" autocomplete="off" maxlength="18">
+
+        <input type="hidden" name="bid.u" id="bidU_val" value="">
+        <section id="gametx" style="display: block; top: 30%" class="wrap-game-tx wrap-table-queue item-taixiu phien-kq drag on-open animated scale_/minigame vitri-vung ui-draggable ui-draggable-handle nanoff">
+            <div class="item-content" id="gametxcontent">
+                <div class="text-top" data-popup="#popup-gamerank" id="gametx_title">
+                    <img src="/minigame/dicegame/img/text_taixiu.png">
+                </div>
+                <div id="tx_phien" class="phien-taixiu">0</div>
+                <div class="tai-wrap">
+                    <div id="tai_number" class="user">0</div>
+                    <div id="tai_icon" class="icon"></div>
+                    <div id="tai_amount_total" class="money">0</div>
+                    <p id="my_tai_amount" class="cuoc-tai"></p>
+                </div>
+                <input type="text" class="input-tai currency-bio" id="bidO" value="" autocomplete="off" maxlength="18">
+
+                <input type="hidden" name="bid.o" id="bidO_val" value="">
+
+                <div class="xiu-wrap">
+                    <div id="xiu_number" class="user">0</div>
+                    <div id="xiu_icon" class="icon"></div>
+                    <div id="xiu_amount_total" class="money">0</div>
+                    <p id="my_xiu_amount" class="cuoc-xiu"></p>
+                </div>
+                <input type="text" class="input-xiu currency-biu" id="bidU" value="" autocomplete="off" maxlength="18">
+                <div id="game-taixiu">
+                    <div class="/*light_tx*/" style="display: block;"></div>
+                    <div class="light_center" style="display: none;"></div>
+                    <div id="clock_effect" class="red-circle clock-big" style="display: inline-block;">-------</div>
+                    <div class="countdown" style="display: inline-block;"></div>
+                    <div id="resultDisplay" style="display: none;" class="dice"></div>
+                    <div id="pixi_effect" class="effect" style="display: none;">
+                        <canvas width="160" height="160" style="touch-action: none; cursor: inherit;"></canvas>
+                    </div>
+                    <div id="dice_message" class="notify" style="display: none;"></div>
+                </div>
+                <div class="countdown clock-small" id="timeWait" style="display: none; color: rgb(255, 198, 0);">00:00</div>
+                <div id="totalDiceResult" class="countDiceResult"></div>
+                <div id="vung_nan" class="ui-draggable ui-draggable-handle"></div>
+                <div class="ketquaphien">
+                    <div id="win_amount" class=""></div>
+                    <div id="tai_amount" class=""></div>
+                    <div id="xiu_amount" class=""></div>
+                </div>
+
+                <div class="control">
+                    <button data-toggle="modal" id="taixiu-bangvinhdanh" data-target="#taixiu-bangvinhdanh" class="btn-vinhdanh">
+                        <img id="modalqueue" src="/minigame/dicegame/img/txicon-xh.png">
+                    </button>
+                    <button class="btn-chat" id="icon-openchattaixiu">
+                        <img src="/minigame/dicegame/img/txicon-chat.png">
+                    </button>
+                    <!--<button data-toggle="modal" data-target="#taixiu-lichsu" class="btn-lichsu" id="modalhistory" onclick="historydice.getHistory(2, 1, '#taixiu-lichsu')">
+                                      <img src="/minigame/dicegame/img/txicon-info.png">
+                                  </button>-->
+                    <button class="btn-huongdan" id="modalfaq" data-toggle="modal" data-target="#taixiu-huongdan">
+                        <img src="/minigame/dicegame/img/txicon-help.png">
+                    </button>
+                    <!--<button class="btn-closeGame" id="modalclose" onclick="dicegame.closeGame()">
+                                      <img src="/minigame/dicegame/img/txicon-close.png">
+                                  </button>-->
+                    <!--<button class="btn-nan" id="btn-nantx" onclick="dicegame.showDisk(0)"></button> -->
+                    <!--<button class="btn-sound" id="btn-soundtx"></button>-->
+                    <!--<button class="btn-soicau" data-toggle="modal" data-target="#table-soicau" id="modalsoicau" onclick="dice_statistic.openSoicau()"></button>-->
+                    <div id="cuoc-wrap" class="cuoc-wrap hide">
+                        <div class="group-button">
+                            <button class="btn-cuocMoney" id="btn1k" data-money="1000">1K</button>
+                            <button class="btn-cuocMoney" id="btn5k" data-money="5000">5K</button>
+                            <button class="btn-cuocMoney" id="btn10k" data-money="10000">10K</button>
+                            <button class="btn-cuocMoney" id="btn50k" data-money="50000">50K</button>
+                            <button class="btn-cuocMoney" id="btn100k" data-money="100000">100K</button>
+                            <button class="btn-cuocMoney btn-cuoclar" id="btn500k" data-money="500000">500K</button>
+                            <button class="btn-cuocMoney btn-cuoclar" id="btn1M" data-money="1000000">1M</button>
+                            <button class="btn-cuocMoney btn-cuoclar" id="btn2M" data-money="2000000">2M</button>
+                        </div>
+                        <div class="group-button">
+                            <button id="btnAllCoin" class="btn-tattay">Tất tay</button>
+                            <button id="btnPutCoin" class="btn-agree">Đồng ý</button>
+                            <button id="btnCancelCoin" class="btn-cancel">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-dice-small">
+                    <ul id="dice_result_list">
+                    </ul>
+                </div>
+                <div class="bg-cover"></div>
+            </div>
+            <!-- Start Chat mini Taixiu -->
+            <div class="chat_popup" id="chattaixiu" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="block-chat-right">
+                    <div class="chat_popup_tx" id="myModal_chat_mini" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="chat-dialog" id="drag_chat" role="document">
+                            <div class="chat-content">
+                                <div class="chat-header">
+                                    <span id="close_mini_chat">
+                                        <img src="/minigame/dicegame/img/close.png">
+                                    </span>
+                                </div>
+                                <div class="chat-body">
+                                    <div class="content_chat_tx" id="chat_scroll" style="position: relative; overflow: visible;">
+                                        <div id="mCSB_1" style="max-height: 231px; overflow:  auto;" tabindex="0">
+                                            <div id="mCSB_1_container" style="position:relative; top:0; left:0;" dir="ltr">
+                                                <ul class="list-unstyled" id="conversation">
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ims_chat">
+                                        <input type="text" class="data_chat" style="color: white" id="dataMessage" placeholder="Nhập nội dung chat">
+                                        <input type="hidden" class="btn btn_submit_chat" id="datasend" value="Gửi">
+                                        <button type="button" class="btn_send_chat" id="button_submit_chat"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div class="container-popup popup-minigame in" id="taixiu-huongdan" style="display: none">
+        <div class="close-popup" id="close-huongdantaixiu" data-dismiss="modal"></div>
+        <div class="title-popup">
+            <img src="/minigame/popup/img/tit_huongdan.png" alt="">
+        </div>
+        <div class="content-popup">
+            <div id="myDIV_mCSB_6" style="overflow: auto;">
+                <div class="pMini-scroll">
+                    <div id="mCSB_6" tabindex="0">
+                        <div id="mCSB_6_container" class="mCSB_container">
+                            <p>
+                                <strong>I. Cách chơi: </strong>
+                            </p>
+                            <p>
+                                <br>1. Chọn nút "Đặt" để dự đoán Tài hoặc Xỉu
+                                <br>2. Nhập số tiền muốn dự đoán khi bảng chọn giá trị đặt hiện ra.
+                                <br>3. Chọn nút đồng ý để xác nhận (hủy để không đặt cược nữa, tất tay là đặt toàn bộ số tiền
+                                hiện có)
+                                <br>4. Hết thời gian đặt cược hệ thống sẽ tung xúc xắc để xác định kết quả.
+                                <br>- Khi kết thúc thời gian đặt cược, nếu số tiền&nbsp;hai bên chênh lệch, số chênh lệch sẽ
+                                được hoàn trả lại cho người chơi (mức ưu tiên tính theo thời gian đặt cược của người chơi,
+                                đặt sớm được giữ đặt muộn bị trả về)
+                                <br>- Người chơi dự đoán tối thiểu 1 bạc&nbsp;và tối đa bằng số dư tài khoản.
+                                <br>- Khi đã đặt cược thành công thì không được phép Hủy.
+                            </p>
+                            <p>
+                                <br>
+                                <strong>II. Quy định về Điểm:</strong>
+                                <br>Tài: Tổng điểm xúc xắc &gt;= 11
+                                <br>Xỉu: Tổng điểm xúc xắc &lt;= 10
+                            </p>
+                            <p>
+                                <br>
+                                <strong>III. Trả thưởng:</strong>
+                                <br>- Sau khi tung xúc xắc có kết quả hệ thống sẽ trả thưởng cho người chơi.
+                                <br>- Khi người chơi đặt cược thành công hệ thống sẽ trừ ngay vào tài khoản của người chơi, kết
+                                thúc ván đánh nếu người chơi thắng sẽ được trả số tiền = Số đã cược + (Số đã cược - Phế)
+                                <br>- Hệ thống sẽ thu phế 2% tiền thắng.
+                            </p>
+                            <p>Mọi thắc mắc các bạn liên hệ với bộ phận CSKH qua 2 kênh:</p>
+                            <ul style="color:#FFFFFF">
+                                <li>Website:
+                                    <a hefr="http://nguhoadan.com/" style="color:#fbcb00">TLBB Ngũ Hoa Đàn</a>
+                                </li>
+                                <li>Fanpage:
+                                    <a hefr="https://www.facebook.com/" style="color:#fbcb00">Ngũ Hoa Đàn</a>
+                                </li>
+                            </ul>
+                            <h5 class="text-uppercase text-center" style="color:#FFFFFF">
+                                <strong>Chúc các bạn chơi game vui vẻ!</strong>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-popup popup-minigame drag popup-bangvinhdanh ui-draggable ui-draggable-handle in" id="taixiu-bangvinhdanh-div"
+        style="display: none">
+        <div class="close-popup" id="close-taixiubangvinhdanh" data-dismiss="modal"></div>
+        <div class="title-popup">
+            <img src="/css/img/tit_bangvinhdanh.png" alt="">
+        </div>
+        <div id="">
+            <div class="content-popup">
+                <div class="pMini-scroll mCustomScrollbar _mCS_6 mCS_no_scrollbar" style="overflow: visible;">
+                    <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                        <div id="mCSB_6_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;"
+                            dir="ltr">
+                            <div class="table-wrap">
+                                <div class="table-inner" id="myDIV_mCSB_6_VinhDanh" style="height: 345px;">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th style="color: white">Hạng</th>
+                                                <th style="color: white">Tài Khoản</th>
+                                                <th style="color: white">Thắng</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ltsTop">
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="table-session" style="top: 90px; z-index: 1090; left: 89px; display: none" class="wrap-table-queue">
+        <div class="item-content">
+            <div class="thongke-wrap ui-draggable show">
+                <div class="popup-wrapper">
+                    <div class="popup-inner">
+                        <div class="popup-header">
+                            <img src="/minigame/dicegame/img/title_lichsuphien.png" class="title-img">
+                        </div>
+                        <div class="popup-content">
+                            <div class="phien-info" id="phien-info">
+
+                            </div>
+                            <div class="" id="div-phien">
+                                <div class="icon-tai"></div>
+                                <div class="dices">
+                                    <div class="dices" id="divDices">
+
+                                    </div>
+                                </div>
+                                <div class="icon-xiu"></div>
+                                <div class="icon-ketqua"></div>
+                                <div class="icon-ketqua-tiny"></div>
+                            </div>
+                            <div class="cuoc-wrap">
+                                <div class="cuoc-tai">
+                                    <div class="inner-content">
+                                        <div class="bg_table_phien" id="bg_table_phien_O">
+                                            <table id="tableO">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="color: white;">Thời gian</th>
+                                                        <th style="color: white;">Người chơi</th>
+                                                        <th style="width:100px; color: white;">Cược</th>
+                                                        <th style="width:100px; color: white;">Hoàn Trả</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tbodyO">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="total_li total_li_left" id="total_li_O">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cuoc-xiu">
+                                    <div class="inner-content">
+                                        <div class="bg_table_phien" id="bg_table_phien_U">
+                                            <table id="tableU">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="color: white;">Thời gian</th>
+                                                        <th style="color: white;">Người chơi</th>
+                                                        <th style="width:100px;color: white;">Cược</th>
+                                                        <th style="width:100px;color: white;">Hoàn Trả</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tbodyU">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="total_li total_li_right" id="total_li_U">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<div class="paginationtx">
+                                <button class="btn-prev">
+                                    <img src="/minigame/dicegame/img/btn-prev.png" width="40">
+                                </button>
+                                <button class="btn-next">
+                                    <img src="/minigame/dicegame/img/btn-next.png" width="40">
+                                </button>
+                            </div>-->
+                        </div>
+                        <button class="close-popup close-popup-control" id="btnCloseTrans"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/js/controllers/dice.js"></script>
+</body>
+
+</html>

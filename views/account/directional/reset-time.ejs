@@ -1,0 +1,47 @@
+<div class="forms" id="reset-time" style="display: none;">
+    <div class="form-grids row widget-shadow" data-example-id="basic-forms">
+        <div class="form-title">
+            <h4>Reset time</h4>
+        </div>
+        <div class="form-body">
+            <form id="formChangePassword">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" style="color: red; font-weight: bold">
+                        Lưu ý: Nhớ đăng xuất game trước 1 phút rồi thực hiện reset time
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Tài khoản</label>
+                    <input type="text" disabled class="form-control" id="txtUsername" placeholder="Tài khoản">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" id="lblChar">Nhân vật</label>
+                    <select class="form-control" id="slChar" name="charguid">
+                        <option value="">---Chọn nhân vật---</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <a id="btnReloadcaptcha">
+                            <label for="exampleInputEmail1" class="pointer" id="lblCaptcha" style="text-align: center"></label>
+                        </a>
+                    </div>
+                    <input type="text" class="form-control" name="svgcaptcha" id="txtCaptcha" placeholder="Nhập mã ở trên">
+                </div>
+                <div class="form-group" id="messageError" style="display: none;">
+                    <label for="exampleInputEmail1" id="lblMessage" style="color: red; font-weight: bold">
+
+                    </label>
+                </div>
+                <div class="sub_home">
+                    <input type="button" class="btn btn-primary" id="btnResetTime" value="Reset Time">
+                    <div class="clearfix">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/controllers/reset-time.js"></script>
+</div>

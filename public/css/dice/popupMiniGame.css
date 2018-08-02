@@ -1,0 +1,81 @@
+.popup-minigame { background: url(../img/bg_popup.png) no-repeat top left; width: 700px; height: 437px; position: absolute; margin: 50px auto 0px auto; left: 0px; right: 0px; z-index: 1120; top: 135px; transform: scale(1.05); outline: 0; }
+.popup-minigame .close-popup { width: 51px; height: 54px; position: absolute; right: 12px; top: 5px; background: url(../img/close.png) no-repeat top center; cursor: pointer; z-index: 1000; }
+.popup-minigame .close-popup:hover { animation: swing 0.5s; }
+.popup-minigame .title-popup { width: 700px; height: 50px; float: left; padding-left: 50px; }
+.popup-minigame .title-popup img {position: relative; top: -10px;; }
+.popup-minigame .content-popup { width: 700px; height: 350px; position: relative; float: left; padding-left: 40px; padding-right: 40px; }
+.popup-minigame .pMini-scroll { width: 620px; height: 350px; position: relative; float: left; color: #FFFFFF; line-height: 25px; }
+.popup-minigame .pMini-scroll table { width: 100%; font-family: 'helveticaneuelight'; font-size: 14px; border-spacing: 0; border-collapse: collapse; }
+.popup-minigame .pMini-scroll table th { text-align: center; padding: 6px 0; font-size: 15px; text-transform: uppercase; }
+.popup-minigame .pMini-scroll thead tr { text-align: center; background: #4d205c !important; }
+.popup-minigame .pMini-scroll table tr:nth-child(odd) { background: #351535; }
+.popup-minigame .pMini-scroll table tr { background: #431e63; }
+.popup-minigame .pMini-scroll table tr td { text-align: center; padding: 5px 0; }
+.popup-minigame .pMini-scroll .pagination {
+    position: relative;
+    top: 20px;
+    display: table !important;
+}
+.popup-minigame .pMini-scroll .pagination li{
+    list-style:none;
+    float:left;
+}
+.popup-bangvinhdanh .pMini-scroll table tr:nth-child(1) td:nth-child(1) span {
+    width: 40px;
+    height: 25px;
+    margin: auto;
+    background-image: url(../img/top1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    text-indent: -999em;
+    display: block;
+}
+.popup-bangvinhdanh .pMini-scroll table tr:nth-child(2) td:nth-child(1) span {
+    width: 40px;
+    height: 25px;
+    margin: auto;
+    background-image: url(../img/top2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    text-indent: -999em;
+    display: block;
+}
+.popup-bangvinhdanh .pMini-scroll table tr:nth-child(3) td:nth-child(1) span {
+    width: 40px;
+    height: 25px;
+    margin: auto;
+    background-image: url(../img/top3.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    text-indent: -999em;
+    display: block;
+}
+.popup-bangvinhdanh .pMini-scroll table tr:nth-child(4) td:nth-child(1) span {
+    width: 40px;
+    height: 25px;
+    margin: auto;
+    background-image: url(../img/top4.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    text-indent: -999em;
+    display: block;
+}
+.popup-bangvinhdanh .pMini-scroll table tr:nth-child(5) td:nth-child(1) span {
+    width: 40px;
+    height: 25px;
+    margin: auto;
+    background-image: url(../img/top5.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    text-indent: -999em;
+    display: block;
+}
+.popup-minigame .pMini-scroll .pagination li.active a {
+    color:#ffd800 !important;
+}
+/*# sourceMappingURL=popupMiniGame.css.map */
