@@ -1,0 +1,29 @@
+<div class="main-page signup-page">
+    <h2 class="title1">Đăng nhập</h2>
+    <div class="widget-shadow">
+        <div class="login-body">
+            <form action="#" id="frmLogin" method="post">
+                <input type="text" class="user" name="username" id="txtUsername" placeholder="Tài khoản" required="">
+                <input type="password" name="password" class="lock" id="txtPassword" placeholder="Mật khẩu" required="">
+                <div style="text-align: center">
+                    <a id="btnReloadcaptcha">
+                        <label for="exampleInputEmail1" class="pointer" id="lblCaptcha" style="text-align: center"></label>
+                    </a>
+                </div>
+                <input type="captcha" name="svgcaptcha" class="lock" id="txtCaptcha" placeholder="Mã xác nhận" required="">
+
+                <div class="sub_home" style="text-align: center">
+                    <input type="button" class="btn btn-primary" id="btnLogin" value="Đăng nhập">
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="registration">
+                    Chưa có tài khoản ?
+                    <a class="" id="btnLoginRegister" href="javascript:;">
+                        Tạo mới tài khoản
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/controllers/login.js"></script>
+</div>

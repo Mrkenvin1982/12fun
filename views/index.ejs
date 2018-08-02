@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <title>TLBB Ngũ Hoa Đàn</title>
+    <link rel="stylesheet" type="text/css" href="themes/css/style-page.css">
+    <link rel="stylesheet" type="text/css" href="themes/css/jquery.fancybox.css">
+    <script type="text/javascript" src="themes/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="themes/js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="themes/js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="themes/js/easeljs-min.js"></script>
+    <script type="text/javascript" src="themes/js/tweenjs-min.js"></script>
+    <script type="text/javascript" src="themes/js/movieclip-min.js"></script>
+    <script type="text/javascript" src="themes/js/preloadjs-min.js"></script>
+    <script type="text/javascript" src="/js/controllers/news-events.js"></script>
+    <style type="text/css">
+        #fancybox-loading div {
+            display: none;
+        }
+    </style>
+
+    <body>
+        <div class="wrap-bg">
+            <div class="container">
+                <div class="header">
+                    <div class="nav">
+                        <ul>
+                            <li class="">
+                                <a href="/">Trang chủ</a>
+                                <label></label>
+                            </li>
+                            <li>
+                                <a href="javascript:$('#pPageNews').show();$('#pPageEvents').hide();" id="btnA1News">Tin tức</a>
+                                <label></label>
+                            </li>
+                            <li>
+                                <a href="javascript:$('#pPageEvents').show();$('#pPageNews').hide() ;" id="btnA1Events">Sự kiện</a>
+                            </li>
+                            <li>
+                                <a href="/">TLBB NGŨ HOA ĐÀN
+                                    <!--<img src="" alt="logo"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/">Cẩm nang</a>
+                                <label></label>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/nguhoadan">Fanpage</a>
+                                <label></label>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Khác</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="maj">
+                    <div class="sidebar left">
+                        <div class="group _1 width">
+                            <a href="#"></a>
+                            <a href="/account"></a>
+                            <a href="/account"></a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="search">
+                            <form id="box-search" method="get" action="/" class="box-search">
+                                <input type="text" class="search" name="keyword" placeholder="Nhập từ khóa tìm kiếm ">
+                                <input type="submit" class="submit-search" value="">
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="group _3">
+                            <a href="javascript:$('#pPageNews').show();$('#pPageEvents').hide();" id="btnANews" class="">Tin Tức</a>
+                            <a href="javascript:$('#pPageNews').hide();$('#pPageEvents').show();" id="btnAEvents" class="">Sự Kiện</a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="group _4">
+                            <div class="tinhnang">
+                                <ul>
+                                    <li>
+                                        <a href="/">
+                                            <i></i>
+                                            <label></label>
+                                            <span>Hướng dẫn</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/nguhoadan">
+                                            <i></i>
+                                            <label></label>
+                                            <span>Cộng đồng</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <i></i>
+                                            <label></label>
+                                            <span>Đặc quyền VIP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <i></i>
+                                            <label></label>
+                                            <span>Tính năng</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>0983 771771</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-ne ">
+                        <div class="group _1">
+                            <p>Thiên Long Bát Bộ Ngũ Hoa Đàn</p>
+                            <p id="pPageNews" style="display: none">
+                                <a href="/">Trang chủ / </a>
+                                <a href="javascript:;">Tin Tức</a>
+                            </p>
+                            <p id="pPageEvents" style="display: none">
+                                <a href="/">Trang Chủ / </a>
+                                <a href="javascript:;">Sự Kiện</a>
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="group _2">
+                            <div class="news">
+                                <div class="box-news">
+                                    <div class="clearfix"></div>
+                                    <div class="news-content">
+                                        <div class="gnew _1">
+                                            <div class="list-news">
+                                                <div class="item">
+                                                    <ul id="lstNewsEvents" class="details-new">
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                    <div class="pagination">
+                                                        <ul id="lstPaging">
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

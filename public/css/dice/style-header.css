@@ -1,0 +1,663 @@
+.headerinfo {
+    margin-top: 25px; }
+  
+  .headerContent {
+    height: 120px;
+    background: url(../img/bg_header.png) no-repeat center top;
+    margin: auto; }
+    .headerContent .logo {
+      width: 135px;
+      float: left;
+      height: 137px;
+      position: relative;
+      z-index: 1020;
+      margin-left: 5px; }
+      .headerContent .logo img {
+        width: 131px;
+        height: 130px;
+        display: block;
+        position: absolute; }
+    .headerContent .hd-left {
+      width: 495px;
+      height: 88px;
+      float: left;
+      padding-top: 23px; }
+    .headerContent .hd-right {
+      width: 495px;
+      height: 88px;
+      float: left;
+      padding-top: 23px; }
+  
+  .form-login .form-inline {
+    display: inline-block;
+    width: 495px;
+    height: 80px;
+    float: left; }
+  .form-login .form-group {
+    display: block;
+    float: left; }
+  .btn-register-fb {
+      width: 80px;
+      height: 50px;
+      display: block;
+      background: url(../img/icon/icon-fanpage.png) no-repeat;
+      background-position: 12px 0px;
+      text-indent: -999em;
+      position: relative;
+      top: -14px;
+      right: -37px;
+  }
+  .form-login .form-group .form-control-header {
+      width: 158px;
+      height: 43px;
+      border: 3px solid #6c2872;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.6);
+      outline: 0;
+      margin-left: 1px;
+      font-family: Montserrat-Bold;
+      color: #FFFFFF;
+      font-size: 16px;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .form-login .btn-login {
+    background: url(../img/icon/btn-dangnhap.png) no-repeat;
+    width: 144px;
+    height: 53px;
+    border: none;
+    margin-left: 30px;
+    outline: 0;
+    cursor: pointer; }
+  
+  .save-password {
+      width: 60px;
+      height: 80px;
+      float: left;
+      padding-top: 10px;
+      padding-left: 20px;
+  }
+  
+  .forget-password {
+      width: 200px;
+      height: 80px;
+      float: left;
+      padding-left: 100px;
+      padding-top: 12px;
+      background: url(../img/icon/getpass.png) no-repeat;
+      background-position: 180px 8px;
+      background-size: 18px;
+  
+  }
+    .forget-password a {
+      font-family: Montserrat-Bold;
+      color: #FFFFFF;
+      font-size: 16px;
+      text-decoration: none; }
+      .forget-password a:hover{
+          color:#fff422;
+      }
+  
+      .login-facebook {
+          width: 59px;
+          height: 80px;
+          float: left;
+      }
+  
+  #btn-facebook {
+    background: url(../img/icon/btn-facebook.png) no-repeat;
+    width: 59px;
+    height: 59px;
+    border: none;
+    margin-left: 0px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin-top: -10px; }
+  
+  .header-register {
+    width: 135px;
+    height: 80px;
+    float: left; }
+  
+  .btn-register {
+    background: url(../img/icon/btn-dangky.png) no-repeat;
+    width: 149px;
+    height: 53px;
+    border: none;
+    margin-left: 20px;
+    outline: 0;
+    cursor: pointer;
+    display: block; }
+  
+  .notify {
+    width: 1000px;
+    height: 23px;
+    margin: 0px auto 0px auto;
+    position: relative;
+    overflow: hidden;
+    top: -40px;
+    z-index: 10; }
+    .notify ul {
+      height: 25px;
+      display: inline-block; }
+      .notify ul li {
+          list-style: none;
+          height: 25px;
+          display: inline-block;
+      }
+        .notify ul li a {
+          color: #FFFFFF;
+          font-size: 16px;
+          height: 25px;
+            padding-left: 50px;
+        }
+  
+  /* The block-checkbox */
+  .block-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Montserrat-Bold;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 26px; }
+  
+  /* Hide the browser's default checkbox */
+  .block-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 29px;
+    width: 29px;
+    background: url(../img/icon/checked.png) no-repeat; }
+  
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
+  
+  /* Show the checkmark when checked */
+  .block-checkbox input:checked ~ .checkmark:after {
+    display: block; }
+  
+  /* Style the checkmark/indicator */
+  .block-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  
+  .avatar-header {
+    width: 64px;
+    height: 64px;
+    float: left;
+    background: url(../img/bg_avatar.png) no-repeat;
+    position: relative;
+    margin-left: 25px;
+    top: -10px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 2px;
+    cursor: pointer; }
+    .avatar-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; }
+  
+  .user-header {
+    width: 127px;
+    height: 60px;
+    float: left;
+    margin-left: 10px; }
+  
+  .name-header {
+    width: 127px;
+    height: 25px;
+    float: left;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff422;
+    font-size: 15px;
+    padding-top: 0px;
+    text-align:left;
+    font-family: Montserrat-ExtraBold; }
+  
+  .id-header {
+    width: 85px;
+    height: 30px;
+    float: left;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: Montserrat-SemiBold;
+    white-space: nowrap; }
+  
+  .mes-header {
+    width: 42px;
+    height: 20px;
+    float: left;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: Montserrat-SemiBold;
+    white-space: nowrap;
+    background: url(../img/bg_thongbao.png) no-repeat;
+    background-position: 15px 0px;
+    position: relative;
+    cursor: pointer; }
+    .mes-header span {
+      width: 15px;
+      height: 15px;
+      background-color: #d6006a;
+      color: #FFFFFF;
+      display: block;
+      position: relative;
+      border-radius: 10px;
+      text-align: center;
+      top: -4px;
+      right: -29px;
+      font-size: 10px;
+      line-height: 15px; }
+  
+  .coin-header {
+    width: 175px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+    background: url(../img/bg_input_coin.png) no-repeat; }
+      .coin-header .item-coin {
+          width: 185px;
+          height: 44px;
+          background: url(../img/icon/funcoin.png) no-repeat;
+          background-position: 5px 4px;
+          font-family: Montserrat-Bold;
+          text-align: left;
+          color: #f5e641;
+          line-height: 44px;
+          padding-left: 45px;
+      }
+  
+  .coin-recharge {
+    width: 78px;
+    height: 60px;
+    float: left; }
+    .coin-recharge .btn-napcoi {
+      width: 90px;
+      height: 57px;
+      background: url(../img/icon/btn-nap.png) no-repeat;
+      position: relative;
+      display: block;
+      top: -2px;
+      cursor: pointer; }
+  
+  .menu-header ul {
+    float: left;
+    width: 495px;
+    padding-left: 45px;
+    position: relative;
+    top: -9px; }
+    .menu-header ul li {
+      width: 80px;
+      list-style: none;
+      display: inline-block;
+      text-align: center; }
+      .menu-header ul li:hover a {
+        color: #fff422; }
+      .menu-header ul li:hover span {
+          -webkit-animation-name: hvr-pulse-grow;
+          animation-name: hvr-pulse-grow;
+          -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+      }
+      .menu-header ul li a {
+          outline: 0;
+          color: #FFFFFF;
+          font-size: 13px;
+          font-family: Montserrat-Bold;
+          text-decoration: none;
+      }
+  .menu-header span {
+    width: 80px;
+    height: 50px;
+    display: block; }
+  .menu-header .icon-ketsat {
+    background: url(../img/icon/ketsat.png) no-repeat;
+    background-position: 12px 0px; }
+  .menu-header .icon-daily {
+      background: url(../img/icon/daily.png) no-repeat;
+      background-position: 12px 0px;
+      -webkit-animation-name: hvr-pulse-grow;
+      animation-name: hvr-pulse-grow;
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+  }
+  .menu-header .icon-fanpage {
+    background: url(../img/icon/icon-fanpage.png) no-repeat;
+    background-position: 12px 0px; }
+  .menu-header .icon-caiapp {
+    background: url(../img/icon/caiapp.png) no-repeat;
+    background-position: 12px 0px; }
+  .menu-header .icon-chuyenfun {
+      background: url(../img/icon/icon-chuyenfun.png) no-repeat;
+      background-position: 12px 3px;
+  }
+  .menu-header .icon-thoat {
+    background: url(../img/icon/thoat.png) no-repeat;
+    background-position: 12px 0px; }
+  
+  ::-webkit-input-placeholder {
+    color: rgba(199, 199, 199, 0.2); }
+  
+  ::-moz-placeholder {
+    color: rgba(199, 199, 199, 0.2); }
+  
+  :-ms-input-placeholder {
+    color: rgba(199, 199, 199, 0.2); }
+  
+  :-moz-placeholder {
+    color: rgba(199, 199, 199, 0.2); }
+  
+  a:hover {
+    cursor: pointer; }
+  
+  @media screen and (max-width: 1600px) {
+    .headerinfo {
+      transform: scale(0.85);
+      margin-top: -10px; }
+  
+    .hufapall {
+      transform: scale(0.85); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.85); } }
+  @media screen and (max-width: 1440px) {
+    .headerinfo {
+      transform: scale(0.75);
+      margin-top: -12px; }
+  
+    .hufapall {
+      transform: scale(0.75); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.75); } }
+  @media screen and (max-width: 1366px) {
+    .headerinfo {
+      transform: scale(0.7);
+      margin-top: -14px;
+      margin-left: -30px; }
+  
+    .hufapall {
+      transform: scale(0.7); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.7); } }
+  @media screen and (max-width: 1280px) {
+    .headerinfo {
+      transform: scale(0.65);
+      margin-top: -23px;
+      margin-left: -30px; }
+  
+    .hufapall {
+      transform: scale(0.65); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.65); } }
+  @media screen and (max-width: 1152px) {
+    .headerinfo {
+      transform: scale(0.6);
+      margin-top: -23px;
+      margin-left: -71px; }
+  
+    .hufapall {
+      transform: scale(0.6); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.6); } }
+  @media screen and (max-width: 1024px) {
+    .headerinfo {
+      transform: scale(0.5);
+      margin-top: -23px;
+      margin-left: -129px; }
+  
+    .hufapall {
+      transform: scale(0.5); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.5); } }
+  @media screen and (max-width: 800px) {
+    .headerinfo {
+      transform: scale(0.4);
+      margin-top: -23px;
+      margin-left: -149px; }
+  
+    .hufapall {
+      transform: scale(0.4); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.4); } }
+  @media screen and (max-width: 640px) {
+    .headerinfo {
+      transform: scale(0.3);
+      margin-top: -23px;
+      margin-left: -151px; }
+  
+    .hufapall {
+      transform: scale(0.3); }
+  
+    #allminigame, #dr_hugame ,#dr_topjackpot {
+      transform: scale(0.3); } }
+  .center {
+    width: 1280px;
+    margin: auto; }
+  
+  .center-respon {
+    width: 1145px;
+    margin: auto; }
+  
+  .main .content {
+    width: 1280px;
+    overflow: hidden;
+    margin-top: 30px; }
+  
+  .content .ads {
+    width: 242px;
+    height: 494px;
+    float: left;
+    margin-left: 85px;
+    margin-top: 34px; }
+  
+  .content .games {
+    width: 928px;
+    height: 512px;
+    float: left;
+    margin-left: 20px; }
+  
+  .games .gamemenu {
+    background: url(../images/bg-menugame.png) no-repeat center bottom;
+    height: 47px; }
+  
+  .games .gamemenu ul {
+    list-style: none;
+    margin-left: 60px; }
+  
+  .games .gamemenu ul li {
+    width: 166px;
+    height: 33px;
+    float: left;
+    text-align: center; }
+  
+  .games .gamemenu ul li#currenttab {
+    background: url(../images/menugame-active.png) no-repeat center top; }
+  
+  .games .gamemenu ul li a {
+    display: block;
+    color: #fff;
+    margin-top: 5px;
+    font-size: 21px;
+    cursor: pointer;
+    text-decoration: none; }
+  
+  .games .gamemenu ul li a:hover {
+    color: #6cc6f8; }
+  
+  .games .gamelist {
+    width: 928px;
+    padding-left: 38px; }
+  
+  .gamelist .gamepage {
+    width: 890px !important; }
+  
+  .gamelist .gameico {
+    width: 184px;
+    height: 217px;
+    overflow: hidden;
+    float: left;
+    margin: 10px 15px; }
+  
+  .bot {
+    background: url(../images/bg-bot.png) no-repeat center bottom;
+    height: 215px;
+    background-position-y: 61px; }
+  
+  .bot .menubot {
+    width: 1280px;
+    height: 125px; }
+  
+  .menubot ul {
+    list-style: none;
+    margin-left: 115px; }
+  
+  .menubot ul li {
+    width: 150px;
+    height: 33px;
+    float: left;
+    text-align: center;
+    margin-top: 26px; }
+  
+  .menubot ul li.active {
+    background: url(../images/menugame-active.png) no-repeat center top; }
+  
+  .menubot ul li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none; }
+  
+  .menubot ul li a:hover {
+    color: #6cc6f8; }
+  
+  .menubot ul li.spin {
+    margin-top: 8px; }
+  
+  .menubot ul li.spin a {
+    height: 109px;
+    position: absolute; }
+  
+  .menubot ul li.spin .list_img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    display: none; }
+  
+  .menubot ul li.spin .list_img img.active {
+    display: block; }
+  
+  .menubot ul li.spin p.num {
+    position: absolute;
+    color: #fff;
+    background: url(../images/ico-spin-num.png) no-repeat center top;
+    width: 44px;
+    height: 32px;
+    padding-top: 12px;
+    margin-left: 123px;
+    z-index: 1; }
+  
+  .bot .footer {
+    width: 1280px; }
+  
+  .footer .os {
+    margin-left: 124px;
+    margin-top: 20px;
+    width: 205px;
+    overflow: hidden;
+    float: left; }
+  
+  .os a {
+    margin: 0 5px; }
+  
+  .footer .contact {
+    float: left;
+    width: 700px;
+    margin-left: 149px;
+    margin-top: 10px; }
+  
+  .contact .info {
+    width: 340px;
+    overflow: hidden;
+    float: left;
+    margin-top: 10px; }
+  
+  .contact .info img {
+    float: left; }
+  
+  .contact .info p {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    margin-left: 10px; }
+  
+  a.minigamebuttondrag {
+    display: block;
+    background: url(../images/ico-minigame.png) no-repeat;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50px;
+    right: 50px; }
+  
+  a.hufapbuttondrag {
+    display: block;
+    background: url(../images/ico-hufap.png) no-repeat;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50px;
+    left: 50px; }
+  
+  /*# sourceMappingURL=style-header.css.map */

@@ -1,0 +1,52 @@
+<div class="main-page signup-page">
+    <h2 class="title1">Đăng ký</h2>
+    <div class="sign-up-row widget-shadow">
+        <form action="#" method="post" id="formRegister">
+            <div class="sign-u">
+                <input type="text" name="username" placeholder="Tài khoản" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <input type="text" name="qq" placeholder="CMND" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <input type="email" name="email" placeholder="Email" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <input type="password" name="password" placeholder="Mật khẩu" required="">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+                <input type="password" placeholder="Nhập lại mật khẩu" required="">
+            </div>
+            <div class="sign-u">
+                <input type="password" name="pin" placeholder="Mã pin" required="">
+            </div>
+            <div class="sign-u">
+                <div style="text-align: center">
+                    <a id="btnReloadcaptcha">
+                        <label for="exampleInputEmail1" class="pointer" id="lblCaptcha" style="text-align: center"></label>
+                    </a>
+                </div>
+            </div>
+            <div class="sign-u">
+                <input type="captcha" name="svgcaptcha" placeholder="Mã xác nhận" required="">
+            </div>
+            <div class="clearfix"> </div>
+            <div class="sub_home" style="text-align: center">
+                <input type="hidden" name="method" value="REGISTER">
+                <input type="button" class="btn btn-primary" id="btnRegister" value="Đăng ký">
+                <div class="clearfix"> </div>
+            </div>
+            <div class="registration">
+                Đã có tài khoản
+                <a class="" id="btnRegisterLogin" href="javascript:;">
+                    Đăng nhập
+                </a>
+            </div>
+        </form>
+    </div>
+    <script src="js/controllers/register.js"></script>
+</div>

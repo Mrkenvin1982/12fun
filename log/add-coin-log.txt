@@ -1,0 +1,5 @@
+{[1,0.6666666666666666,1,"hant2",1,"hant2"] -- 28/07/2018 10:8 -- ERROR|{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlMessage":"Truncated incorrect DOUBLE value: 'hant2'","sqlState":"22007","index":0,"sql":" UPDATE tlbbweb.account set point = point - 1 WHERE name = 0.6666666666666666"}}
+{"hant2" -- 28/07/2018 10:19 -- TypeError: Object.values(...)[j].trim is not a function}
+{[1,0.6666666666666666,"1","hant2",1,"hant2"] -- 28/07/2018 10:22 -- ERROR|{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlMessage":"Truncated incorrect DOUBLE value: 'hant2'","sqlState":"22007","index":0,"sql":" UPDATE tlbbweb.account set point = point - 1 WHERE name = 0.6666666666666666"}}
+{[1,"hant2",1,0.6666666666666666,"1","hant2"] -- 28/07/2018 10:24 -- SUCCESS|}
+{[979,"hant2",979,652.6666666666666,"1","hant2"] -- 28/07/2018 10:24 -- SUCCESS|}
