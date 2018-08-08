@@ -32,7 +32,8 @@ method.dataFile = (data, status) => {
     let dd = today.getDate();
     let mm = today.getMonth() + 1;
     let yyyy = today.getFullYear();
-
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
     if (dd < 10) {
         dd = "0" + dd;
     }
@@ -41,7 +42,15 @@ method.dataFile = (data, status) => {
         mm = "0" + mm;
     }
 
-    today = dd + "/" + mm + "/" + yyyy + " " + today.getHours() + ":" + today.getMinutes();
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    today = dd + "/" + mm + "/" + yyyy + " " + hours + ":" + minutes;
 
     let value = "{" + JSON.stringify(data) + " -- " + today + " -- " + status + "}" + "\r\n";
     return value;
